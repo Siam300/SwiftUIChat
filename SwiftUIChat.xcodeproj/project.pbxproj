@@ -19,6 +19,9 @@
 		C94F0ABC2B467DBF00A042E1 /* ChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F0ABB2B467DBF00A042E1 /* ChannelsView.swift */; };
 		C94F0ABE2B467DD200A042E1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F0ABD2B467DD200A042E1 /* SettingsView.swift */; };
 		C94F0AC12B467E0300A042E1 /* ConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F0AC02B467E0300A042E1 /* ConversationsView.swift */; };
+		C9B3B6BC2B47331B001D6BA1 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6BB2B47331B001D6BA1 /* SettingsHeaderView.swift */; };
+		C9B3B6BE2B473569001D6BA1 /* SettingsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6BD2B473569001D6BA1 /* SettingsCellView.swift */; };
+		C9B3B6C02B473975001D6BA1 /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6BF2B473975001D6BA1 /* SettingsCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		C94F0ABB2B467DBF00A042E1 /* ChannelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsView.swift; sourceTree = "<group>"; };
 		C94F0ABD2B467DD200A042E1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C94F0AC02B467E0300A042E1 /* ConversationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsView.swift; sourceTree = "<group>"; };
+		C9B3B6BB2B47331B001D6BA1 /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
+		C9B3B6BD2B473569001D6BA1 /* SettingsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellView.swift; sourceTree = "<group>"; };
+		C9B3B6BF2B473975001D6BA1 /* SettingsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 		C94F0AA92B4670D400A042E1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C9B3B6BF2B473975001D6BA1 /* SettingsCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -151,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				C94F0ABD2B467DD200A042E1 /* SettingsView.swift */,
+				C9B3B6BB2B47331B001D6BA1 /* SettingsHeaderView.swift */,
+				C9B3B6BD2B473569001D6BA1 /* SettingsCellView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -251,8 +260,11 @@
 			files = (
 				C94F0ABA2B467DB100A042E1 /* ChatsView.swift in Sources */,
 				C94F0AAD2B4670F500A042E1 /* LogInView.swift in Sources */,
+				C9B3B6C02B473975001D6BA1 /* SettingsCellViewModel.swift in Sources */,
 				C94F0A9C2B4670C000A042E1 /* ContentView.swift in Sources */,
+				C9B3B6BC2B47331B001D6BA1 /* SettingsHeaderView.swift in Sources */,
 				C94F0AC12B467E0300A042E1 /* ConversationsView.swift in Sources */,
+				C9B3B6BE2B473569001D6BA1 /* SettingsCellView.swift in Sources */,
 				C94F0ABE2B467DD200A042E1 /* SettingsView.swift in Sources */,
 				C94F0A9A2B4670C000A042E1 /* SwiftUIChatApp.swift in Sources */,
 				C94F0ABC2B467DBF00A042E1 /* ChannelsView.swift in Sources */,
