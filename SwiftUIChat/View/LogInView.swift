@@ -25,7 +25,7 @@ struct LogInView: View {
                         .bold()
                         .foregroundColor(.blue)
                     
-                    VStack(spacing: 20) {
+                    VStack(spacing: 40) {
                         CustomTextField(imageName: "envelope", placeHolderText: "Email", isSecureField: false, text: $email)
                             .autocapitalization(.none)
                         
@@ -49,7 +49,7 @@ struct LogInView: View {
                 Button(action: {
                     print("Sign in")
                 }, label: {
-                    Text("Sign in")
+                    Text("Sign In")
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(width: 340, height: 50)
@@ -61,17 +61,18 @@ struct LogInView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: RegistrationView()) {
+                NavigationLink(destination: RegistrationView()
+                    .navigationBarBackButtonHidden(true)) {
                     HStack {
                         Text("Don't have account?")
                             .font(.system(size: 14))
                         
                         Text("Sign Up")
-                            .font(.system(size: 14))
+                            .font(.system(size: 14, weight: .semibold))
                     }
                 }
+                .padding(.bottom, 32)
             }
-            .padding(.leading)
         }
         .padding(.top, -56)
     }
