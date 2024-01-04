@@ -8,8 +8,72 @@
 import SwiftUI
 
 struct LogInView: View {
+    @State private var email = ""
+    @State private var password = ""
+    
     var body: some View {
-        Text("LogIn View")
+        NavigationView {
+            VStack {
+                VStack(alignment: .leading, spacing: 12) {
+                    HStack { Spacer() }
+                    Text("Hello.")
+                        .font(.title)
+                        .bold()
+                    
+                    Text("Welcome")
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(.blue)
+                    
+                    VStack(spacing: 20) {
+                        CustomTextField(imageName: "envelope", placeHolderText: "Email", isSecureField: false, text: $email)
+                            .autocapitalization(.none)
+                        
+                        CustomTextField(imageName: "lock", placeHolderText: "Password", isSecureField: true, text: $password)
+                    }
+                    .padding([.top, .horizontal], 32)
+                }
+                .padding(.leading)
+                
+                HStack {
+                    Spacer()
+                    
+                    NavigationLink(destination: Text("Reset Password")) {
+                        Text("Forgot Password?")
+                            .font(.system(size: 13, weight: .semibold))
+                            .padding(.top)
+                            .padding(.trailing)
+                    }
+                }
+                
+                Button(action: {
+                    print("Sign in")
+                }, label: {
+                    Text("Sign in")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .frame(width: 340, height: 50)
+                        .background(.blue)
+                        .clipShape(Capsule())
+                        .padding()
+                })
+                .shadow(color: .gray, radius: 10)
+                
+                Spacer()
+                
+                NavigationLink(destination: RegistrationView()) {
+                    HStack {
+                        Text("Don't have account?")
+                            .font(.system(size: 14))
+                        
+                        Text("Sign Up")
+                            .font(.system(size: 14))
+                    }
+                }
+            }
+            .padding(.leading)
+        }
+        .padding(.top, -56)
     }
 }
 
