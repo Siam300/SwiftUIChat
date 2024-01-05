@@ -62,7 +62,7 @@ struct EditProfileView: View {
                         
                         //Status
                         NavigationLink {
-                            Text("Status")
+                            StatusSelectorView()
                         } label: {
                             HStack {
                                 Text("Available")
@@ -80,6 +80,7 @@ struct EditProfileView: View {
                     
                     Spacer()
                 }
+                
             }
             .navigationTitle("Edit Profile")
             .navigationBarTitleDisplayMode(.inline)
