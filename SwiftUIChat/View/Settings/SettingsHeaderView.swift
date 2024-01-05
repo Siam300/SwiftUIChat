@@ -20,6 +20,7 @@ struct SettingsHeaderView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text("Bruce Wayne")
                     .font(.system(size: 18))
+                    .foregroundColor(.black)
                 
                 Text("Available")
                     .font(.system(size: 14))

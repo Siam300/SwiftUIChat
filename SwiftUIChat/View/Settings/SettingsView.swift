@@ -16,7 +16,9 @@ struct SettingsView: View {
                 Text("")
                     .frame(height: 0)
                 VStack(spacing: 32) {
-                    SettingsHeaderView()
+                    NavigationLink(destination: EditProfileView()) {
+                        SettingsHeaderView()
+                    }
                     
                     VStack(spacing: 1) {
                         ForEach((SettingsCellViewModel.allCases), id: \.self) { viewModel in
@@ -34,7 +36,6 @@ struct SettingsView: View {
                             .background(Color.white)
                     }
 
-                    
                     Spacer()
                 }                
             }
