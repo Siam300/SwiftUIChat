@@ -25,7 +25,7 @@ struct UserCellView: View {
                     Text("Full Name")
                         .font(.system(size: 15))
                 }
-                
+
                 Spacer()
             }
             .padding(.horizontal)
