@@ -19,26 +19,23 @@ struct StatusSelectorView: View {
                         .foregroundStyle(.gray)
                         .padding()
                     
-                    HStack {
-                        Text("Available")
-                        Spacer()
-                    }
-                    .padding()
-                    .background(.white)
+                    StatusCell(viewModel: StatusViewModel(rawValue: 0)!)
+                        .background(.white)
                     
                     Text("SELECT YOUR STATUS")
                         .foregroundStyle(.gray)
                         .padding()
-                        
+                    
                     
                     // for loop for status
                     VStack {
-                        ForEach((0 ... 10), id: \.self) { _ in
-                            HStack {
-                                Text("Available")
-                                Spacer()
-                            }
-                            .padding()
+                        ForEach((StatusViewModel.allCases.filter({ $0 != .notConfigured }))
+                                , id: \.self) { viewModel in
+                            Button(action: {
+                                
+                            }, label: {
+                                StatusCell(viewModel: viewModel)
+                            })
                         }
                     }
                     .background(.white)
@@ -50,4 +47,18 @@ struct StatusSelectorView: View {
 
 #Preview {
     StatusSelectorView()
+}
+
+struct StatusCell: View {
+    let viewModel: StatusViewModel
+    
+    var body: some View {
+        HStack {
+            Text(viewModel.title)
+                .foregroundStyle(.black)
+            Spacer()
+        }
+        .padding(.horizontal)
+        .frame(height: 50)
+    }
 }
