@@ -25,6 +25,7 @@
 		C9FA34F92B47A34300628B84 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA34F82B47A34300628B84 /* EditProfileView.swift */; };
 		C9FA34FB2B47B0F100628B84 /* StatusSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA34FA2B47B0F100628B84 /* StatusSelectorView.swift */; };
 		C9FACF972B49151F00CB9FB0 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FACF962B49151F00CB9FB0 /* StatusViewModel.swift */; };
+		C9FACF992B49205900CB9FB0 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FACF982B49205900CB9FB0 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		C9FA34F82B47A34300628B84 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		C9FA34FA2B47B0F100628B84 /* StatusSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSelectorView.swift; sourceTree = "<group>"; };
 		C9FACF962B49151F00CB9FB0 /* StatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		C9FACF982B49205900CB9FB0 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				C94F0AB02B46724D00A042E1 /* CustomTextField.swift */,
+				C9FACF982B49205900CB9FB0 /* ImagePicker.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				C9FACF972B49151F00CB9FB0 /* StatusViewModel.swift in Sources */,
 				C9FA34F92B47A34300628B84 /* EditProfileView.swift in Sources */,
 				C9FA34FB2B47B0F100628B84 /* StatusSelectorView.swift in Sources */,
+				C9FACF992B49205900CB9FB0 /* ImagePicker.swift in Sources */,
 				C94F0ABA2B467DB100A042E1 /* ChatsView.swift in Sources */,
 				C94F0AAD2B4670F500A042E1 /* LogInView.swift in Sources */,
 				C9B3B6C02B473975001D6BA1 /* SettingsCellViewModel.swift in Sources */,

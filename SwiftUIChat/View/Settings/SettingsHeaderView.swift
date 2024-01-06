@@ -12,7 +12,7 @@ struct SettingsHeaderView: View {
         HStack {
             Image(systemName: "person.fill")
                 .resizable()
-                .scaledToFill()
+                .scaledToFit()
                 .frame(width: 64, height: 64)
                 .clipShape(Circle())
                 .padding(.leading)
@@ -24,7 +24,7 @@ struct SettingsHeaderView: View {
                 
                 Text("Available")
                     .font(.system(size: 14))
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
             }
             Spacer()
         }
