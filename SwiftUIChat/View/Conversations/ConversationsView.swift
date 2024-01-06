@@ -9,7 +9,31 @@ import SwiftUI
 
 struct ConversationsView: View {
     var body: some View {
-        Text("Conversations View")
+        ZStack(alignment: .bottomTrailing) {
+            
+            //chats
+            ScrollView {
+                VStack(alignment: .leading) {
+                    ForEach((0 ... 10), id: \.self) { _ in
+                        ConversationCellView()
+                    }
+                }
+            }
+            
+            Button(action: {
+                
+            }, label: {
+                Image(systemName: "square.and.pencil")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 24, height: 24)
+                    .padding()
+            })
+            .background(Color(.systemBlue))
+            .foregroundColor(.white)
+            .clipShape(Circle())
+            .padding()
+        }
     }
 }
 
