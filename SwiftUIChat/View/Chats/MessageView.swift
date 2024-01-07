@@ -15,7 +15,7 @@ struct MessageView: View {
             if isFromCurrentUser {
                 Spacer()
                 
-                Text("Dummy Text for testing.Dummy Text for testing.Dummy Text for testing.Dummy Text for testing.Dummy Text for testing.Dummy Text for testing.Dummy Text for testing.Dummy Text for testing.Dummy Text for testing.")
+                Text("Dummy Text for testing.")
                     .padding(12)
                     .background(.blue)
                     .font(.system(size: 15))

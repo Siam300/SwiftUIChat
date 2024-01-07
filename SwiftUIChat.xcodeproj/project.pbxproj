@@ -29,6 +29,7 @@
 		C9B3B6C02B473975001D6BA1 /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6BF2B473975001D6BA1 /* SettingsCellViewModel.swift */; };
 		C9F8DCBB2B4A68FF0009FE0E /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F8DCBA2B4A68FF0009FE0E /* ChatBubble.swift */; };
 		C9F8DCBD2B4A6AF60009FE0E /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F8DCBC2B4A6AF60009FE0E /* MessageView.swift */; };
+		C9F8DCBF2B4A732A0009FE0E /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F8DCBE2B4A732A0009FE0E /* CustomInputView.swift */; };
 		C9FA34F92B47A34300628B84 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA34F82B47A34300628B84 /* EditProfileView.swift */; };
 		C9FA34FB2B47B0F100628B84 /* StatusSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA34FA2B47B0F100628B84 /* StatusSelectorView.swift */; };
 		C9FACF972B49151F00CB9FB0 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FACF962B49151F00CB9FB0 /* StatusViewModel.swift */; };
@@ -59,6 +60,7 @@
 		C9B3B6BF2B473975001D6BA1 /* SettingsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellViewModel.swift; sourceTree = "<group>"; };
 		C9F8DCBA2B4A68FF0009FE0E /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		C9F8DCBC2B4A6AF60009FE0E /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		C9F8DCBE2B4A732A0009FE0E /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
 		C9FA34F82B47A34300628B84 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		C9FA34FA2B47B0F100628B84 /* StatusSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSelectorView.swift; sourceTree = "<group>"; };
 		C9FACF962B49151F00CB9FB0 /* StatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				C94F0AB92B467DB100A042E1 /* ChatView.swift */,
 				C9F8DCBA2B4A68FF0009FE0E /* ChatBubble.swift */,
 				C9F8DCBC2B4A6AF60009FE0E /* MessageView.swift */,
+				C9F8DCBE2B4A732A0009FE0E /* CustomInputView.swift */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				C94F0AC12B467E0300A042E1 /* ConversationsView.swift in Sources */,
 				C9B3B6BE2B473569001D6BA1 /* SettingsCellView.swift in Sources */,
 				C996E31C2B49840D00AD6580 /* SearchBar.swift in Sources */,
+				C9F8DCBF2B4A732A0009FE0E /* CustomInputView.swift in Sources */,
 				C94F0ABE2B467DD200A042E1 /* SettingsView.swift in Sources */,
 				C94F0A9A2B4670C000A042E1 /* SwiftUIChatApp.swift in Sources */,
 				C94F0ABC2B467DBF00A042E1 /* ChannelsView.swift in Sources */,
