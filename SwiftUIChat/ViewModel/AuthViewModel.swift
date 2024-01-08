@@ -6,8 +6,12 @@
 //
 
 import Firebase
+import FirebaseAuth
+import UIKit
 
 class AuthViewModel: NSObject, ObservableObject {
+    @Published var didAuthinticateuser = false
+    private var tempCurrentUser: FirebaseAuth.User?
     
     func logIn() {
         print("LogIn user from viewModel")
@@ -20,22 +24,26 @@ class AuthViewModel: NSObject, ObservableObject {
                 return
             }
             guard let user = result?.user else { return }
+            self.tempCurrentUser = user
             
             let data: [String: Any] = ["email": email,
                                        "fullname": fullname,
                                        "username": username ]
             Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
-                print("DEBUG: Successfully updated user info in firebase")
+                self.didAuthinticateuser = true
             }
         }
     }
     
-    func updateProfileImage() {
-        
-    }
-    
-    func uploadProfileImage() {
+    func uploadProfileImage(_ image: UIImage) {
         print("DEBUG: Profile image uploaded from viewModel")
+        guard let uid = tempCurrentUser?.uid else { return }
+        
+        ImageUploader.uploadImage(image: image) { imageUrl in
+            Firestore.firestore().collection("users").document(uid).updateData(["profileImageUrl": imageUrl]) { _ in
+                print("DEBUG: Successfully updated user data")
+            }
+        }
     }
     
     func signOut() {

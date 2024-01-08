@@ -13,10 +13,16 @@ struct RegistrationView: View {
     @State private var fullname = ""
     @State private var password = ""
     @Environment(\.presentationMode) var mode
-    @ObservedObject var viewModel = AuthViewModel()
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         VStack {
+            
+            NavigationLink(
+                destination: ProfilePhotoSelectorView(),
+                isActive: $viewModel.didAuthinticateuser,
+                label: { })
+            
             VStack(alignment: .leading, spacing: 12) {
                 HStack { Spacer() }
                 Text("Get Started.")
