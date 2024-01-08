@@ -9,13 +9,14 @@ import SwiftUI
 
 struct MessageView: View {
     var isFromCurrentUser: Bool
+    var messageText: String
     
     var body: some View {
         HStack {
             if isFromCurrentUser {
                 Spacer()
                 
-                Text("Dummy Text for testing.")
+                Text(messageText)
                     .padding(12)
                     .background(.blue)
                     .font(.system(size: 15))
@@ -31,7 +32,7 @@ struct MessageView: View {
                         .frame(width: 32, height: 32)
                         .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                     
-                    Text("Dummy Text for testing")
+                    Text(messageText)
                         .padding(12)
                         .background(Color(.systemGray6))
                         .font(.system(size: 15))
@@ -47,6 +48,6 @@ struct MessageView: View {
     }
 }
 
-#Preview {
-    MessageView(isFromCurrentUser: true)
-}
+//#Preview {
+//    MessageView(isFromCurrentUser: true, messageText: Message)
+//}
