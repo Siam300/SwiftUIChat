@@ -55,6 +55,7 @@
 		C99E7E812B4C0F7A0002ADF7 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C99E7E802B4C0F7A0002ADF7 /* FirebaseRemoteConfigSwift */; };
 		C99E7E832B4C0F7A0002ADF7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C99E7E822B4C0F7A0002ADF7 /* FirebaseStorage */; };
 		C99E7E852B4C0F7A0002ADF7 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = C99E7E842B4C0F7A0002ADF7 /* FirebaseStorageCombine-Community */; };
+		C99E7E872B4C20AA0002ADF7 /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E7E862B4C20AA0002ADF7 /* ProfilePhotoSelectorView.swift */; };
 		C9B3B6BC2B47331B001D6BA1 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6BB2B47331B001D6BA1 /* SettingsHeaderView.swift */; };
 		C9B3B6BE2B473569001D6BA1 /* SettingsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6BD2B473569001D6BA1 /* SettingsCellView.swift */; };
 		C9B3B6C02B473975001D6BA1 /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6BF2B473975001D6BA1 /* SettingsCellViewModel.swift */; };
@@ -90,6 +91,7 @@
 		C99E7DCF2B4B99970002ADF7 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		C99E7DDE2B4BB0480002ADF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C99E7DE02B4BB2690002ADF7 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		C99E7E862B4C20AA0002ADF7 /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
 		C9B3B6BB2B47331B001D6BA1 /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
 		C9B3B6BD2B473569001D6BA1 /* SettingsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellView.swift; sourceTree = "<group>"; };
 		C9B3B6BF2B473975001D6BA1 /* SettingsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellViewModel.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			children = (
 				C94F0AAC2B4670F500A042E1 /* LogInView.swift */,
 				C94F0AAE2B46710300A042E1 /* RegistrationView.swift */,
+				C99E7E862B4C20AA0002ADF7 /* ProfilePhotoSelectorView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				C94F0AC12B467E0300A042E1 /* ConversationsView.swift in Sources */,
 				C9B3B6BE2B473569001D6BA1 /* SettingsCellView.swift in Sources */,
 				C996E31C2B49840D00AD6580 /* SearchBar.swift in Sources */,
+				C99E7E872B4C20AA0002ADF7 /* ProfilePhotoSelectorView.swift in Sources */,
 				C9F8DCBF2B4A732A0009FE0E /* CustomInputView.swift in Sources */,
 				C94F0ABE2B467DD200A042E1 /* SettingsView.swift in Sources */,
 				C94F0A9A2B4670C000A042E1 /* SwiftUIChatApp.swift in Sources */,

@@ -34,6 +34,10 @@ class AuthViewModel: NSObject, ObservableObject {
         
     }
     
+    func uploadProfileImage() {
+        print("DEBUG: Profile image uploaded from viewModel")
+    }
+    
     func signOut() {
         
     }
