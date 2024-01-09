@@ -11,9 +11,6 @@ struct SettingsView: View {
     private let user: User
     
     init(user: User) {
-        // implemented load feature but not efficient.. calls lots of unnecessary api
-//        print("DEBUG: Did init...................................")
-//        AuthViewModel.shared.fetchUser()
         self.user = user
     }
     
