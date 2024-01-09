@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct SettingsView: View {
+    private let user: User
+    
+    init(user: User) {
+        // implemented load feature but not efficient.. calls lots of unnecessary api
+//        print("DEBUG: Did init...................................")
+//        AuthViewModel.shared.fetchUser()
+        self.user = user
+    }
     
     var body: some View {
         ZStack {
@@ -19,7 +27,7 @@ struct SettingsView: View {
                 NavigationLink(
                     destination: EditProfileView(),
                     label: {
-                        SettingsHeaderView()
+                        SettingsHeaderView(user: user)
                             .padding(.vertical)
                     })
                 
@@ -46,6 +54,6 @@ struct SettingsView: View {
     }
 }
 
-#Preview {
-    SettingsView()
-}
+//#Preview {
+//    SettingsView()
+//}
