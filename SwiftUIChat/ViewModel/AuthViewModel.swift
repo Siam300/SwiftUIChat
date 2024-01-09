@@ -23,11 +23,13 @@ class AuthViewModel: NSObject, ObservableObject {
     func logIn(withEmail email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if let error = error {
-                print("DEBUG: LogIn failed with error \(error.localizedDescription)")
+                print("DEBUG: Login failed: \(error.localizedDescription)")
                 return
             }
             
-            self.userSession = result?.user
+            guard let user = result?.user else { return }
+            self.userSession = user
+//            self.fetchUser()
         }
     }
     
@@ -50,12 +52,12 @@ class AuthViewModel: NSObject, ObservableObject {
     }
     
     func uploadProfileImage(_ image: UIImage) {
-        print("DEBUG: Profile image uploaded from viewModel")
         guard let uid = tempCurrentUser?.uid else { return }
         
         ImageUploader.uploadImage(image: image) { imageUrl in
             Firestore.firestore().collection("users").document(uid).updateData(["profileImageUrl": imageUrl]) { _ in
-                print("DEBUG: Successfully updated user data")
+                self.userSession = self.tempCurrentUser
+//                self.fetchUser()
             }
         }
     }
