@@ -30,7 +30,6 @@ class NewMessageViewModel: ObservableObject {
             
             //---------------Alternative Ends Here ----------------------//
             
-            print("DEBUG: Users \(self.users)")
         }
     }
     

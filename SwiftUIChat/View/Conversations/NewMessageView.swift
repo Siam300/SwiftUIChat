@@ -13,6 +13,7 @@ struct NewMessageView: View {
     @State private var text = ""
     @State private var isEditing = false
     @ObservedObject var viewModel = NewMessageViewModel()
+    @Binding var user: User?
     
     var body: some View {
         ScrollView {
@@ -24,6 +25,7 @@ struct NewMessageView: View {
                 ForEach(viewModel.users) { user in
                     Button(action: {
                         showChatView.toggle()
+                        self.user = user
                         mode.wrappedValue.dismiss()
                     }, label: {
                         UserCellView(user: user)
@@ -35,6 +37,6 @@ struct NewMessageView: View {
     }
 }
 
-#Preview {
-    NewMessageView(showChatView: .constant(true))
-}
+//#Preview {
+//    NewMessageView(showChatView: .constant(true))
+//}
