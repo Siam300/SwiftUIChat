@@ -18,88 +18,86 @@ struct EditProfileView: View {
             Color(.systemGroupedBackground)
                 .ignoresSafeArea()
             
-            VStack {
-                Text("")
-                    .frame(height: 0)
-                VStack(alignment: .leading, spacing: 44) {
+            VStack(alignment: .leading) {
+                VStack {
                     //Header
-                    VStack {
-                        //Photo, Edit Button, Text
-                        
-                        HStack {
-                            //Photo, Edit Button
-                            VStack {
-                                if let profileImage = profileImage {
-                                    profileImage
-                                        .resizable()
-                                        .scaledToFill()
-                                        .frame(width: 64, height: 64)
-                                        .clipShape(Circle())
-                                } else {
-                                    Image(systemName: "person.fill")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 64, height: 64)
-                                        .clipShape(Circle())
-                                }
-                                
-                                Button(action: {
-                                    showImagePicker.toggle()
-                                }, label: {
-                                    Text("Edit")
-                                })
-                                .sheet(isPresented: $showImagePicker, onDismiss: loadImage){
-                                    ImagePicker(image: $selectedImage)
-                                }
+                    //Photo, Edit Button, Text
+                    
+                    HStack(alignment: .center) {
+                        //Photo, Edit Button
+                        VStack(alignment: .center) {
+                            if let profileImage = profileImage {
+                                profileImage
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 64, height: 64)
+                                    .clipShape(Circle())
+                            } else {
+                                Image(systemName: "person.fill")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 64, height: 64)
+                                    .clipShape(Circle())
                             }
-                            .padding(.top)
                             
-                            Text("Enter your name or change your profile photo")
-                                .font(.system(size: 16))
-                                .foregroundColor(.gray)
-                                .padding([.horizontal, .bottom])
+                            Button(action: {
+                                showImagePicker.toggle()
+                            }, label: {
+                                Text("Edit")
+                            })
+                            .sheet(isPresented: $showImagePicker, onDismiss: loadImage){
+                                ImagePicker(image: $selectedImage)
+                            }
                         }
+                        .padding(.top)
                         
-                        Divider()
-                            .padding(.horizontal)
-                        
-                        TextField("", text: $fullName)
-                            .padding(8)
+                        Text("Enter your name or change your profile photo")
+                            .font(.system(size: 16))
+                            .foregroundColor(.gray)
+                            .padding([.horizontal, .bottom])
                     }
-                    .background(.white)
+                    
+                    Divider()
+                        .padding(.horizontal)
+                    
+                    TextField("", text: $fullName)
+                        .padding(8)
+                }
+                .background(.white)
+                
+                //Status
+                VStack(alignment: .leading) {
+                    //Status Text
+                    Text("Status")
+                        .padding()
+                        .foregroundColor(.gray)
                     
                     //Status
-                    VStack(alignment: .leading) {
-                        //Status Text
-                        Text("Status")
-                            .padding()
-                            .foregroundColor(.gray)
-                        
-                        //Status
-                        NavigationLink {
-                            StatusSelectorView()
-                        } label: {
-                            HStack {
+                    NavigationLink(
+                        destination: StatusSelectorView(),
+                        label: {
+                            HStack(alignment: .center) {
                                 Text("Available")
+                                    .frame(height: 50)
+                                    .padding(.leading)
                                 
                                 Spacer()
                                 
                                 Image(systemName: "chevron.right")
                                     .foregroundColor(.gray)
+                                    .padding(.trailing)
                             }
-                            .padding()
-                            .background(.white)
-                        }
-
-                    }
+                            .background(Color.white)
+                        })
                     
-                    Spacer()
                 }
                 
+                Spacer()
             }
-            .navigationTitle("Edit Profile")
-            .navigationBarTitleDisplayMode(.inline)
+            
         }
+        .navigationTitle("Edit Profile")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     func loadImage() {
