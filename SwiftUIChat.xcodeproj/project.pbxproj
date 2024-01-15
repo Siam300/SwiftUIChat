@@ -67,6 +67,7 @@
 		C9F239AE2B557455001F7BDD /* ConversationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F239AD2B557455001F7BDD /* ConversationCellViewModel.swift */; };
 		C9F239B02B557D25001F7BDD /* ChannelCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F239AF2B557D25001F7BDD /* ChannelCellView.swift */; };
 		C9F239B22B558169001F7BDD /* SelectGroupMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F239B12B558169001F7BDD /* SelectGroupMembersView.swift */; };
+		C9F239B42B55862A001F7BDD /* SelectedGroupMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F239B32B55862A001F7BDD /* SelectedGroupMembersView.swift */; };
 		C9F4DA542B4E2DF900963C0C /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F4DA532B4E2DF900963C0C /* MessageViewModel.swift */; };
 		C9F4DA562B4E35FE00963C0C /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F4DA552B4E35FE00963C0C /* ConversationsViewModel.swift */; };
 		C9F8DCBB2B4A68FF0009FE0E /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F8DCBA2B4A68FF0009FE0E /* ChatBubble.swift */; };
@@ -112,6 +113,7 @@
 		C9F239AD2B557455001F7BDD /* ConversationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCellViewModel.swift; sourceTree = "<group>"; };
 		C9F239AF2B557D25001F7BDD /* ChannelCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCellView.swift; sourceTree = "<group>"; };
 		C9F239B12B558169001F7BDD /* SelectGroupMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGroupMembersView.swift; sourceTree = "<group>"; };
+		C9F239B32B55862A001F7BDD /* SelectedGroupMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedGroupMembersView.swift; sourceTree = "<group>"; };
 		C9F4DA532B4E2DF900963C0C /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		C9F4DA552B4E35FE00963C0C /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
 		C9F8DCBA2B4A68FF0009FE0E /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				C94F0ABB2B467DBF00A042E1 /* ChannelsView.swift */,
 				C9F239AF2B557D25001F7BDD /* ChannelCellView.swift */,
 				C9F239B12B558169001F7BDD /* SelectGroupMembersView.swift */,
+				C9F239B32B55862A001F7BDD /* SelectedGroupMembersView.swift */,
 			);
 			path = Channels;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				C94F0ABE2B467DD200A042E1 /* SettingsView.swift in Sources */,
 				C94F0A9A2B4670C000A042E1 /* SwiftUIChatApp.swift in Sources */,
 				C9F239AE2B557455001F7BDD /* ConversationCellViewModel.swift in Sources */,
+				C9F239B42B55862A001F7BDD /* SelectedGroupMembersView.swift in Sources */,
 				C94F0ABC2B467DBF00A042E1 /* ChannelsView.swift in Sources */,
 				C9F239B22B558169001F7BDD /* SelectGroupMembersView.swift in Sources */,
 				C99E7DE12B4BB2690002ADF7 /* AuthViewModel.swift in Sources */,

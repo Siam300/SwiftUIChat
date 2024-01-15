@@ -18,6 +18,7 @@ struct SelectGroupMembersView: View {
                     .padding()
                 
                 //selected user
+                SelectedGroupMembersView()
                 
                 //user list view
                 ScrollView {
