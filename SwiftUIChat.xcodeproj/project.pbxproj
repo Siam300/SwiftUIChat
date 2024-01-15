@@ -65,6 +65,8 @@
 		C9D2C0D12B4D136B00AFD0FB /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = C9D2C0D02B4D136B00AFD0FB /* FirebaseStorageCombine-Community */; };
 		C9D2C0D32B4D139F00AFD0FB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D2C0D22B4D139F00AFD0FB /* User.swift */; };
 		C9F239AE2B557455001F7BDD /* ConversationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F239AD2B557455001F7BDD /* ConversationCellViewModel.swift */; };
+		C9F239B02B557D25001F7BDD /* ChannelCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F239AF2B557D25001F7BDD /* ChannelCellView.swift */; };
+		C9F239B22B558169001F7BDD /* SelectGroupMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F239B12B558169001F7BDD /* SelectGroupMembersView.swift */; };
 		C9F4DA542B4E2DF900963C0C /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F4DA532B4E2DF900963C0C /* MessageViewModel.swift */; };
 		C9F4DA562B4E35FE00963C0C /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F4DA552B4E35FE00963C0C /* ConversationsViewModel.swift */; };
 		C9F8DCBB2B4A68FF0009FE0E /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F8DCBA2B4A68FF0009FE0E /* ChatBubble.swift */; };
@@ -108,6 +110,8 @@
 		C9B61F112B4DC71F0080BD58 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C9D2C0D22B4D139F00AFD0FB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C9F239AD2B557455001F7BDD /* ConversationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCellViewModel.swift; sourceTree = "<group>"; };
+		C9F239AF2B557D25001F7BDD /* ChannelCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCellView.swift; sourceTree = "<group>"; };
+		C9F239B12B558169001F7BDD /* SelectGroupMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGroupMembersView.swift; sourceTree = "<group>"; };
 		C9F4DA532B4E2DF900963C0C /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		C9F4DA552B4E35FE00963C0C /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
 		C9F8DCBA2B4A68FF0009FE0E /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
@@ -290,6 +294,8 @@
 			isa = PBXGroup;
 			children = (
 				C94F0ABB2B467DBF00A042E1 /* ChannelsView.swift */,
+				C9F239AF2B557D25001F7BDD /* ChannelCellView.swift */,
+				C9F239B12B558169001F7BDD /* SelectGroupMembersView.swift */,
 			);
 			path = Channels;
 			sourceTree = "<group>";
@@ -422,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9FACF972B49151F00CB9FB0 /* StatusViewModel.swift in Sources */,
+				C9F239B02B557D25001F7BDD /* ChannelCellView.swift in Sources */,
 				C9FA34F92B47A34300628B84 /* EditProfileView.swift in Sources */,
 				C9FA34FB2B47B0F100628B84 /* StatusSelectorView.swift in Sources */,
 				C9FACF992B49205900CB9FB0 /* ImagePicker.swift in Sources */,
@@ -452,6 +459,7 @@
 				C94F0A9A2B4670C000A042E1 /* SwiftUIChatApp.swift in Sources */,
 				C9F239AE2B557455001F7BDD /* ConversationCellViewModel.swift in Sources */,
 				C94F0ABC2B467DBF00A042E1 /* ChannelsView.swift in Sources */,
+				C9F239B22B558169001F7BDD /* SelectGroupMembersView.swift in Sources */,
 				C99E7DE12B4BB2690002ADF7 /* AuthViewModel.swift in Sources */,
 				C94F0AAF2B46710300A042E1 /* RegistrationView.swift in Sources */,
 				C9F4DA562B4E35FE00963C0C /* ConversationsViewModel.swift in Sources */,

@@ -26,28 +26,20 @@ struct ConversationsView: View {
             //chats
             ScrollView {
                 VStack(alignment: .leading) {
+                    
+                    HStack{ Spacer() }
+                    
                     ForEach(viewModel.recentMessages) { message in
                         ConversationCellView(viewModel: ConversationCellViewModel(message))
                     }
                 }
             }
             
-            Button(action: {
-                showMessageView.toggle()
-            }, label: {
-                Image(systemName: "square.and.pencil")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 24, height: 24)
-                    .padding()
-            })
-            .background(Color(.systemBlue))
-            .foregroundColor(.white)
-            .clipShape(Circle())
-            .padding()
+            FloatingButton(show: $showMessageView)
             .sheet(isPresented: $showMessageView, content: {
                 NewMessageView(showChatView: $showChatView, user: $selectedUser)
             })
+            
         }
     }
 }
