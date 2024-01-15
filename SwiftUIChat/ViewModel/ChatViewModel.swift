@@ -6,6 +6,7 @@
 //
 import SwiftUI
 import Firebase
+import FirebaseFirestoreSwift
 
 class ChatViewModel: ObservableObject {
     let user: User
@@ -20,20 +21,39 @@ class ChatViewModel: ObservableObject {
         guard let currentUid = AuthViewModel.shared.userSession?.uid else { return }
         guard let chatPartnerId = user.id else { return }
         
-        let query = COLLECTION_MESSAGES.document(currentUid).collection(chatPartnerId)
+        let query = COLLECTION_MESSAGES
+            .document(currentUid)
+            .collection(chatPartnerId)
+            .order(by: "timestamp", descending: false)
         
-        query.getDocuments { snapshot, error in
-            guard let documents = snapshot?.documents else { return }
-             var messages = documents.compactMap{ try? $0.data(as: Message.self) }
+        //this will not to fetch messages in real time
+        query.addSnapshotListener { snapshot, _ in
+            guard let changes = snapshot?.documentChanges.filter({ $0.type == .added }) else { return }
             
-            print(self.messages)
-            
+            var messages = changes.compactMap{ try? $0.document.data(as: Message.self) }
+                        
             for (index, message) in messages.enumerated() where message.fromId != currentUid {
                 messages[index].user = self.user
             }
             
-            self.messages = messages
+            self.messages.append(contentsOf: messages)
         }
+        //--------------------XXX------------------------
+        
+        //this will not to fetch messages in real time
+//        query.getDocuments { snapshot, error in
+//            guard let documents = snapshot?.documents else { return }
+//             var messages = documents.compactMap{ try? $0.data(as: Message.self) }
+//            
+//            print(self.messages)
+//            
+//            for (index, message) in messages.enumerated() where message.fromId != currentUid {
+//                messages[index].user = self.user
+//            }
+//            
+//            self.messages = messages
+//        }
+        //--------------------XXX------------------------
     }
     
     func sendMessage(_ messageText: String) {
