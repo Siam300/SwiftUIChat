@@ -63,6 +63,9 @@ class ChatViewModel: ObservableObject {
         let currentUserRef = COLLECTION_MESSAGES.document(currentUid).collection(chatPartnerId).document()
         let chatPartnerRef = COLLECTION_MESSAGES.document(chatPartnerId).collection(currentUid)
         
+        let recentCurrentRef = COLLECTION_MESSAGES.document(currentUid).collection("recent-messages").document(chatPartnerId)
+        let recentPartnerRef = COLLECTION_MESSAGES.document(chatPartnerId).collection("recent-messages").document(currentUid)
+        
         let messageId = currentUserRef.documentID
         
         let data: [String: Any] = ["text": messageText,
@@ -73,5 +76,8 @@ class ChatViewModel: ObservableObject {
         
         currentUserRef.setData(data)
         chatPartnerRef.document(messageId).setData(data)
+        
+        recentCurrentRef.setData(data)
+        recentPartnerRef.setData(data)
     }
 }
