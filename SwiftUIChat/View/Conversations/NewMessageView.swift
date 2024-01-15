@@ -24,7 +24,7 @@ struct NewMessageView: View {
             VStack(alignment: .leading) {
                 ForEach(viewModel.users) { user in
                     Button(action: {
-                        showChatView.toggle()
+                        self.showChatView.toggle()
                         self.user = user
                         mode.wrappedValue.dismiss()
                     }, label: {

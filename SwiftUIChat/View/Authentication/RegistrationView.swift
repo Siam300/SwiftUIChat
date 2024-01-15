@@ -20,7 +20,7 @@ struct RegistrationView: View {
             
             NavigationLink(destination: ProfilePhotoSelectorView(),
                            isActive: $viewModel.didAuthinticateuser,
-                           label: {} )
+                           label: { } )
             
             VStack(alignment: .leading, spacing: 12) {
                 HStack { Spacer() }

@@ -6,23 +6,26 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ConversationCellView: View {
+    @ObservedObject var viewModel: MessageViewModel
+    
     var body: some View {
         VStack {
             HStack {
                 //image
-                Image(systemName: "person.fill")
+                KFImage(viewModel.chatParnerProfileImageUrl)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 48, height: 48)
                     .clipShape(Circle())
                 //message info
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Full Name")
+                    Text(viewModel.fullname)
                         .font(.system(size: 14, weight: .semibold))
                     
-                    Text("Dummy Conversation")
+                    Text(viewModel.message.text)
                         .font(.system(size: 15))
                 }
                 
@@ -33,9 +36,12 @@ struct ConversationCellView: View {
             Divider()
         }
         .padding(.top)
+        .onAppear {
+            viewModel.fetchUser()
+        }
     }
 }
 
-#Preview {
-    ConversationCellView()
-}
+//#Preview {
+//    ConversationCellView()
+//}
