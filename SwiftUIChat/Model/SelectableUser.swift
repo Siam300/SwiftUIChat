@@ -9,7 +9,7 @@ import Foundation
 
 struct SelectableUser: Identifiable {
     let user: User
-    var isSelected: Bool = true
+    var isSelected: Bool = false
     
     var id: String {
         return user.id ?? NSUUID().uuidString

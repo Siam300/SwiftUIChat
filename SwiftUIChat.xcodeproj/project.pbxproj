@@ -64,6 +64,8 @@
 		C9D2C0CF2B4D136B00AFD0FB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C9D2C0CE2B4D136B00AFD0FB /* FirebaseStorage */; };
 		C9D2C0D12B4D136B00AFD0FB /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = C9D2C0D02B4D136B00AFD0FB /* FirebaseStorageCombine-Community */; };
 		C9D2C0D32B4D139F00AFD0FB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D2C0D22B4D139F00AFD0FB /* User.swift */; };
+		C9F1A4C12B565A1200E71467 /* SelectGroupMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F1A4C02B565A1200E71467 /* SelectGroupMembersViewModel.swift */; };
+		C9F1A4C32B565DD800E71467 /* SelectableUserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F1A4C22B565DD800E71467 /* SelectableUserCellViewModel.swift */; };
 		C9F239AE2B557455001F7BDD /* ConversationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F239AD2B557455001F7BDD /* ConversationCellViewModel.swift */; };
 		C9F239B02B557D25001F7BDD /* ChannelCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F239AF2B557D25001F7BDD /* ChannelCellView.swift */; };
 		C9F239B22B558169001F7BDD /* SelectGroupMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F239B12B558169001F7BDD /* SelectGroupMembersView.swift */; };
@@ -112,6 +114,8 @@
 		C9B61F0F2B4DC6A70080BD58 /* NewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewModel.swift; sourceTree = "<group>"; };
 		C9B61F112B4DC71F0080BD58 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C9D2C0D22B4D139F00AFD0FB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C9F1A4C02B565A1200E71467 /* SelectGroupMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGroupMembersViewModel.swift; sourceTree = "<group>"; };
+		C9F1A4C22B565DD800E71467 /* SelectableUserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableUserCellViewModel.swift; sourceTree = "<group>"; };
 		C9F239AD2B557455001F7BDD /* ConversationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCellViewModel.swift; sourceTree = "<group>"; };
 		C9F239AF2B557D25001F7BDD /* ChannelCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCellView.swift; sourceTree = "<group>"; };
 		C9F239B12B558169001F7BDD /* SelectGroupMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGroupMembersView.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 		C94F0AA92B4670D400A042E1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C9F1A4BF2B5659D700E71467 /* Channels */,
 				C9B3B6BF2B473975001D6BA1 /* SettingsCellViewModel.swift */,
 				C9FACF962B49151F00CB9FB0 /* StatusViewModel.swift */,
 				C99E7DCF2B4B99970002ADF7 /* ChatViewModel.swift */,
@@ -329,6 +334,15 @@
 				C99874CE2B4968F600676AEB /* NewMessageView.swift */,
 			);
 			path = Conversations;
+			sourceTree = "<group>";
+		};
+		C9F1A4BF2B5659D700E71467 /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+				C9F1A4C02B565A1200E71467 /* SelectGroupMembersViewModel.swift */,
+				C9F1A4C22B565DD800E71467 /* SelectableUserCellViewModel.swift */,
+			);
+			path = Channels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,6 +454,7 @@
 				C9F239B02B557D25001F7BDD /* ChannelCellView.swift in Sources */,
 				C9FA34F92B47A34300628B84 /* EditProfileView.swift in Sources */,
 				C9FA34FB2B47B0F100628B84 /* StatusSelectorView.swift in Sources */,
+				C9F1A4C32B565DD800E71467 /* SelectableUserCellViewModel.swift in Sources */,
 				C9FACF992B49205900CB9FB0 /* ImagePicker.swift in Sources */,
 				C9D2C0D32B4D139F00AFD0FB /* User.swift in Sources */,
 				C94F0ABA2B467DB100A042E1 /* ChatView.swift in Sources */,
@@ -464,6 +479,7 @@
 				C9B3B6BE2B473569001D6BA1 /* SettingsCellView.swift in Sources */,
 				C996E31C2B49840D00AD6580 /* SearchBar.swift in Sources */,
 				C9B61F122B4DC71F0080BD58 /* Constants.swift in Sources */,
+				C9F1A4C12B565A1200E71467 /* SelectGroupMembersViewModel.swift in Sources */,
 				C99E7E872B4C20AA0002ADF7 /* ProfilePhotoSelectorView.swift in Sources */,
 				C9F8DCBF2B4A732A0009FE0E /* CustomInputView.swift in Sources */,
 				C94F0ABE2B467DD200A042E1 /* SettingsView.swift in Sources */,

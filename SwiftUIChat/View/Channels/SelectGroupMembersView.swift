@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SelectGroupMembersView: View {
     @State private var searchText = ""
+    @ObservedObject var viewModel = SelectGroupMembersViewModel()
     
     var body: some View {
         NavigationView {
@@ -22,8 +23,8 @@ struct SelectGroupMembersView: View {
                 
                 //user list view
                 ScrollView {
-                    ForEach((0 ... 10), id: \.self) { _ in
-                        SelectableUserCellView(selectableUser: SelectableUser(user: MOCK_USER))
+                    ForEach(viewModel.selectableUsers) { selectableUser in
+                        SelectableUserCellView(viewModel: SelectableUserCellViewModel(selectableUser: selectableUser))
                     }
                 }
             }
