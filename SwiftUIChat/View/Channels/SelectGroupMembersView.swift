@@ -10,6 +10,7 @@ import SwiftUI
 struct SelectGroupMembersView: View {
     @State private var searchText = ""
     @State private var isEditing = false
+    @Binding var show: Bool
     @Environment(\.presentationMode) var mode
     @ObservedObject var viewModel = SelectGroupMembersViewModel()
     
@@ -50,7 +51,7 @@ struct SelectGroupMembersView: View {
     
     var nextButton: some View {
         NavigationLink(
-            destination: CreateChannelView(),
+            destination: CreateChannelView(viewModel.selectedUsers, show: $show),
             label: {
                 Text("Next").bold()
             })
@@ -65,6 +66,6 @@ struct SelectGroupMembersView: View {
     }
 }
 
-#Preview {
-    SelectGroupMembersView()
-}
+//#Preview {
+//    SelectGroupMembersView()
+//}

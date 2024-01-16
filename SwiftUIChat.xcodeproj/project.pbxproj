@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C91742792B56D9C400734735 /* CreateChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91742782B56D9C400734735 /* CreateChannelView.swift */; };
+		C917427B2B56E3DD00734735 /* CreateChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C917427A2B56E3DD00734735 /* CreateChannelViewModel.swift */; };
 		C94F0A9A2B4670C000A042E1 /* SwiftUIChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F0A992B4670C000A042E1 /* SwiftUIChatApp.swift */; };
 		C94F0A9C2B4670C000A042E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F0A9B2B4670C000A042E1 /* ContentView.swift */; };
 		C94F0A9E2B4670C100A042E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C94F0A9D2B4670C100A042E1 /* Assets.xcassets */; };
@@ -86,6 +87,7 @@
 
 /* Begin PBXFileReference section */
 		C91742782B56D9C400734735 /* CreateChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelView.swift; sourceTree = "<group>"; };
+		C917427A2B56E3DD00734735 /* CreateChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelViewModel.swift; sourceTree = "<group>"; };
 		C94F0A962B4670C000A042E1 /* SwiftUIChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94F0A992B4670C000A042E1 /* SwiftUIChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIChatApp.swift; sourceTree = "<group>"; };
 		C94F0A9B2B4670C000A042E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 			children = (
 				C9F1A4C02B565A1200E71467 /* SelectGroupMembersViewModel.swift */,
 				C9F1A4C22B565DD800E71467 /* SelectableUserCellViewModel.swift */,
+				C917427A2B56E3DD00734735 /* CreateChannelViewModel.swift */,
 			);
 			path = Channels;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				C9F239B42B55862A001F7BDD /* SelectedGroupMembersView.swift in Sources */,
 				C94F0ABC2B467DBF00A042E1 /* ChannelsView.swift in Sources */,
 				C9F239B22B558169001F7BDD /* SelectGroupMembersView.swift in Sources */,
+				C917427B2B56E3DD00734735 /* CreateChannelViewModel.swift in Sources */,
 				C99E7DE12B4BB2690002ADF7 /* AuthViewModel.swift in Sources */,
 				C94F0AAF2B46710300A042E1 /* RegistrationView.swift in Sources */,
 				C9F4DA562B4E35FE00963C0C /* ConversationsViewModel.swift in Sources */,

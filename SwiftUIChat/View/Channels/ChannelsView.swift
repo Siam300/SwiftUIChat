@@ -23,15 +23,15 @@ struct ChannelsView: View {
             
             FloatingButton(show: $showCreateGroupView)
                 .sheet(isPresented: $showCreateGroupView, content: {
-                    SelectGroupMembersView()
+                    SelectGroupMembersView(show: $showCreateGroupView)
                 })
         }
     }
 }
 
-#Preview {
-    ChannelsView()
-}
+//#Preview {
+//    ChannelsView()
+//}
 
 struct FloatingButton: View {
     @Binding var show: Bool

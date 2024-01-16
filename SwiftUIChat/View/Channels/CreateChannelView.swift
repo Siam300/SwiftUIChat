@@ -12,6 +12,13 @@ struct CreateChannelView: View {
     @State private var imagePickerPresented = false
     @State private var selectedImage: UIImage?
     @State private var channelImage: Image?
+    @ObservedObject var viewModel: CreateChannelViewModel
+    @Binding var show: Bool
+    
+    init(_ selectableUsers: [SelectableUser], show: Binding<Bool>) {
+        self.viewModel = CreateChannelViewModel(selectableUsers)
+        self._show = show
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -52,6 +59,11 @@ struct CreateChannelView: View {
             
             Spacer()
         }
+        .onReceive(viewModel.$didCreateChannel, perform: { completed in
+            if completed {
+                show.toggle()
+            }
+        })
         .navigationTitle("Create Channel")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(trailing: createChannelButton)
@@ -64,7 +76,7 @@ struct CreateChannelView: View {
     
     var createChannelButton: some View {
         Button(action: {
-            
+            viewModel.createChannel(name: channelName, image: selectedImage)
         }, label: {
             Text("Create").bold()
                 .disabled(channelName.isEmpty)
@@ -72,6 +84,6 @@ struct CreateChannelView: View {
     }
 }
 
-#Preview {
-    CreateChannelView()
-}
+//#Preview {
+//    CreateChannelView()
+//}
