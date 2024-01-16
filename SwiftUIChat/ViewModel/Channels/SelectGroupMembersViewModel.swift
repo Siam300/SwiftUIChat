@@ -17,11 +17,11 @@ class SelectGroupMembersViewModel: ObservableObject {
     
     //fetch users
     func fetchUsers() {
-        Firestore.firestore().collection("users").getDocuments { snapshot, _ in
+        COLLECTION_USERS.getDocuments { snapshot, _ in
             guard let documents = snapshot?.documents else { return }
             
             let users = documents.compactMap({ try? $0.data(as: User.self) })
-                .filter({ $0.id != AuthViewModel.shared.userSession?.uid }) //filtering current user so that users cant chat themself
+                .filter({ $0.id != Auth.auth().currentUser?.uid }) //filtering current user so that users cant chat themself
             
             self.selectableUsers = users.map({ SelectableUser(user: $0) })
         }
@@ -41,4 +41,12 @@ class SelectGroupMembersViewModel: ObservableObject {
     }
     
     //filter users for search
+    func filteredUsers(_ query: String) -> [SelectableUser] {
+        let lowerdcasedQuery = query.lowercased()
+        
+        return selectableUsers.filter({
+            $0.user.username.lowercased().contains(lowerdcasedQuery) ||
+            $0.user.fullname.lowercased().contains(lowerdcasedQuery)
+        })
+    }
 }
