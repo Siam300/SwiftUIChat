@@ -6,25 +6,36 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ChannelCellView: View {
+    let channel: Channel
+    
     var body: some View {
         NavigationLink(destination: Text("Channel chat view")) {
             VStack {
                 HStack {
                     //image
-                    Image(systemName: "person.2.circle.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 48, height: 48)
-                        .clipShape(Circle())
+                    if let imageUrl = channel.imageUrl {
+                        KFImage(URL(string: imageUrl))
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 48, height: 48)
+                            .clipShape(Circle())
+                    } else {
+                        Image(systemName: "person.2.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 48, height: 48)
+                            .clipShape(Circle())
+                    }
                     
                     //message info
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Group chat")
+                        Text(channel.name)
                             .font(.system(size: 14, weight: .semibold))
                         
-                        Text("Dummy User: Test group message")
+                        Text(channel.lastMessage)
                             .font(.system(size: 15))
                     }
                     .foregroundColor(Color.black)
@@ -39,6 +50,6 @@ struct ChannelCellView: View {
     }
 }
 
-#Preview {
-    ChannelCellView()
-}
+//#Preview {
+//    ChannelCellView()
+//}

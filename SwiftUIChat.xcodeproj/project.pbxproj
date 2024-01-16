@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C91742792B56D9C400734735 /* CreateChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91742782B56D9C400734735 /* CreateChannelView.swift */; };
 		C917427B2B56E3DD00734735 /* CreateChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C917427A2B56E3DD00734735 /* CreateChannelViewModel.swift */; };
+		C917427D2B56F35100734735 /* ChannelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C917427C2B56F35100734735 /* ChannelsViewModel.swift */; };
+		C917427F2B56F3C100734735 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C917427E2B56F3C100734735 /* Channel.swift */; };
 		C94F0A9A2B4670C000A042E1 /* SwiftUIChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F0A992B4670C000A042E1 /* SwiftUIChatApp.swift */; };
 		C94F0A9C2B4670C000A042E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F0A9B2B4670C000A042E1 /* ContentView.swift */; };
 		C94F0A9E2B4670C100A042E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C94F0A9D2B4670C100A042E1 /* Assets.xcassets */; };
@@ -88,6 +90,8 @@
 /* Begin PBXFileReference section */
 		C91742782B56D9C400734735 /* CreateChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelView.swift; sourceTree = "<group>"; };
 		C917427A2B56E3DD00734735 /* CreateChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelViewModel.swift; sourceTree = "<group>"; };
+		C917427C2B56F35100734735 /* ChannelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewModel.swift; sourceTree = "<group>"; };
+		C917427E2B56F3C100734735 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		C94F0A962B4670C000A042E1 /* SwiftUIChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94F0A992B4670C000A042E1 /* SwiftUIChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIChatApp.swift; sourceTree = "<group>"; };
 		C94F0A9B2B4670C000A042E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -272,6 +276,7 @@
 				C99E7DCD2B4B984B0002ADF7 /* Message.swift */,
 				C9D2C0D22B4D139F00AFD0FB /* User.swift */,
 				C9F239B72B558B9B001F7BDD /* SelectableUser.swift */,
+				C917427E2B56F3C100734735 /* Channel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -347,6 +352,7 @@
 				C9F1A4C02B565A1200E71467 /* SelectGroupMembersViewModel.swift */,
 				C9F1A4C22B565DD800E71467 /* SelectableUserCellViewModel.swift */,
 				C917427A2B56E3DD00734735 /* CreateChannelViewModel.swift */,
+				C917427C2B56F35100734735 /* ChannelsViewModel.swift */,
 			);
 			path = Channels;
 			sourceTree = "<group>";
@@ -474,6 +480,7 @@
 				C996E31E2B49883E00AD6580 /* Extensions.swift in Sources */,
 				C9F239B82B558B9B001F7BDD /* SelectableUser.swift in Sources */,
 				C9F8DCBB2B4A68FF0009FE0E /* ChatBubble.swift in Sources */,
+				C917427D2B56F35100734735 /* ChannelsViewModel.swift in Sources */,
 				C99E7E892B4C30450002ADF7 /* ImageUploader.swift in Sources */,
 				C9B61F102B4DC6A70080BD58 /* NewMessageViewModel.swift in Sources */,
 				C99874CF2B4968F600676AEB /* NewMessageView.swift in Sources */,
@@ -484,6 +491,7 @@
 				C94F0AC12B467E0300A042E1 /* ConversationsView.swift in Sources */,
 				C9B3B6BE2B473569001D6BA1 /* SettingsCellView.swift in Sources */,
 				C996E31C2B49840D00AD6580 /* SearchBar.swift in Sources */,
+				C917427F2B56F3C100734735 /* Channel.swift in Sources */,
 				C9B61F122B4DC71F0080BD58 /* Constants.swift in Sources */,
 				C9F1A4C12B565A1200E71467 /* SelectGroupMembersViewModel.swift in Sources */,
 				C91742792B56D9C400734735 /* CreateChannelView.swift in Sources */,

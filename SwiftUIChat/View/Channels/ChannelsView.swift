@@ -9,14 +9,15 @@ import SwiftUI
 
 struct ChannelsView: View {
     @State private var showCreateGroupView = false
+    @ObservedObject var viewModel = ChannelsViewModel()
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             
             ScrollView {
                 VStack {
-                    ForEach((0 ... 10), id: \.self) { _ in
-                        ChannelCellView()
+                    ForEach(viewModel.channels) { channel in
+                        ChannelCellView(channel: channel)
                     }
                 }
             }
