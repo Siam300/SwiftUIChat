@@ -32,7 +32,7 @@ struct SelectGroupMembersView: View {
                 ScrollView {
                     ForEach(
                         searchText.isEmpty ? viewModel.selectableUsers :
-                        viewModel.filteredUsers(searchText)
+                            viewModel.filteredUsers(searchText)
                     ) { selectableUser in
                         Button(action: {
                             viewModel.selectUser(selectableUser, isSelected: !selectableUser.isSelected)
@@ -49,9 +49,11 @@ struct SelectGroupMembersView: View {
     }
     
     var nextButton: some View {
-        NavigationLink(destination: Text("Destination"), label: {
-            Text("Next").bold()
-        })
+        NavigationLink(
+            destination: CreateChannelView(),
+            label: {
+                Text("Next").bold()
+            })
     }
     
     var cancelButton: some View {

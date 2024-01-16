@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91742792B56D9C400734735 /* CreateChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91742782B56D9C400734735 /* CreateChannelView.swift */; };
 		C94F0A9A2B4670C000A042E1 /* SwiftUIChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F0A992B4670C000A042E1 /* SwiftUIChatApp.swift */; };
 		C94F0A9C2B4670C000A042E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F0A9B2B4670C000A042E1 /* ContentView.swift */; };
 		C94F0A9E2B4670C100A042E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C94F0A9D2B4670C100A042E1 /* Assets.xcassets */; };
@@ -84,6 +85,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C91742782B56D9C400734735 /* CreateChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelView.swift; sourceTree = "<group>"; };
 		C94F0A962B4670C000A042E1 /* SwiftUIChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94F0A992B4670C000A042E1 /* SwiftUIChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIChatApp.swift; sourceTree = "<group>"; };
 		C94F0A9B2B4670C000A042E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				C9F239B12B558169001F7BDD /* SelectGroupMembersView.swift */,
 				C9F239B32B55862A001F7BDD /* SelectedGroupMembersView.swift */,
 				C9F239B52B558A31001F7BDD /* SelectableUserCellView.swift */,
+				C91742782B56D9C400734735 /* CreateChannelView.swift */,
 			);
 			path = Channels;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				C996E31C2B49840D00AD6580 /* SearchBar.swift in Sources */,
 				C9B61F122B4DC71F0080BD58 /* Constants.swift in Sources */,
 				C9F1A4C12B565A1200E71467 /* SelectGroupMembersViewModel.swift in Sources */,
+				C91742792B56D9C400734735 /* CreateChannelView.swift in Sources */,
 				C99E7E872B4C20AA0002ADF7 /* ProfilePhotoSelectorView.swift in Sources */,
 				C9F8DCBF2B4A732A0009FE0E /* CustomInputView.swift in Sources */,
 				C94F0ABE2B467DD200A042E1 /* SettingsView.swift in Sources */,
