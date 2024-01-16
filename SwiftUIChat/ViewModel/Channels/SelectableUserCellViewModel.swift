@@ -27,6 +27,6 @@ struct SelectableUserCellViewModel {
     }
     
     var selectImageForegroundColor: Color {
-        return selectableUser.isSelected ? .blue : .gray
+        selectableUser.isSelected ? .blue : .gray
     }
 }

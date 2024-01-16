@@ -9,6 +9,7 @@ import Firebase
 
 class SelectGroupMembersViewModel: ObservableObject {
     @Published var selectableUsers = [SelectableUser]()
+    @Published var selectedUsers = [SelectableUser]()
     
     init() {
         fetchUsers()
@@ -25,7 +26,19 @@ class SelectGroupMembersViewModel: ObservableObject {
             self.selectableUsers = users.map({ SelectableUser(user: $0) })
         }
     }
+    
     //select or deselect users
+    func selectUser(_ user: SelectableUser, isSelected: Bool) {
+        guard let index = selectableUsers.firstIndex(where: { $0.id == user.id }) else { return }
+        
+        selectableUsers[index].isSelected = isSelected
+        
+        if isSelected {
+            selectedUsers.append(selectableUsers[index])
+        } else {
+            selectedUsers.removeAll(where: { $0.id == user.id })
+        }
+    }
     
     //filter users for search
 }

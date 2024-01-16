@@ -29,6 +29,7 @@ struct SelectableUserCellView: View {
                     Text(viewModel.fullName)
                         .font(.system(size: 15))
                 }
+                .foregroundColor(.black)
 
                 Spacer()
                 
@@ -41,7 +42,6 @@ struct SelectableUserCellView: View {
                 
             }
             .padding(.horizontal)
-            
         }
         .padding(.top)
     }

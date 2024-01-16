@@ -19,12 +19,18 @@ struct SelectGroupMembersView: View {
                     .padding()
                 
                 //selected user
-                SelectedGroupMembersView()
+                if !viewModel.selectedUsers.isEmpty {
+                    SelectedGroupMembersView()
+                }
                 
                 //user list view
                 ScrollView {
                     ForEach(viewModel.selectableUsers) { selectableUser in
-                        SelectableUserCellView(viewModel: SelectableUserCellViewModel(selectableUser: selectableUser))
+                        Button(action: {
+                            viewModel.selectUser(selectableUser, isSelected: !selectableUser.isSelected)
+                        }, label: {
+                            SelectableUserCellView(viewModel: SelectableUserCellViewModel(selectableUser: selectableUser))
+                        })
                     }
                 }
             }
