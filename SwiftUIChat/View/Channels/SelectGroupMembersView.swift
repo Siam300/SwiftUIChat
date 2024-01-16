@@ -20,7 +20,7 @@ struct SelectGroupMembersView: View {
                 
                 //selected user
                 if !viewModel.selectedUsers.isEmpty {
-                    SelectedGroupMembersView()
+                    SelectedGroupMembersView(viewModel: viewModel)
                 }
                 
                 //user list view
