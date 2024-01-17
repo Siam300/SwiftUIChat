@@ -12,7 +12,7 @@ struct ChannelCellView: View {
     let channel: Channel
     
     var body: some View {
-        NavigationLink(destination: Text("Channel chat view")) {
+        NavigationLink(destination: ChannelChatView(channel)) {
             VStack {
                 HStack {
                     //image
