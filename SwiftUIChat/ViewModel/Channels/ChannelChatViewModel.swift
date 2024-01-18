@@ -30,10 +30,8 @@ class ChannelChatViewModel: ObservableObject {
         query.addSnapshotListener { snapshot, _ in
             guard let changes = snapshot?.documentChanges.filter({ $0.type == .added }) else { return }
             
-            var tempMessages = changes.compactMap{ try? $0.document.data(as: Message.self) }
-            
-            
-            
+            let tempMessages = changes.compactMap{ try? $0.document.data(as: Message.self) }
+
             for (index, message) in tempMessages.enumerated() where message.fromId != currentUid {
                 self.fetchUser(withUid: message.fromId) { user in
                     self.messages[index].user = user
@@ -66,7 +64,6 @@ class ChannelChatViewModel: ObservableObject {
     private func fetchUser(withUid uid: String, completion: @escaping(User) -> Void) {
         COLLECTION_USERS.document(uid).getDocument { snapshot, _ in
             guard let user = try? snapshot?.data(as: User.self) else { return }
-            print("DEBUG: User = \(user.username)")
             completion(user)
         }
     }

@@ -8,8 +8,14 @@
 import SwiftUI
 import Kingfisher
 
+enum MessageViewConfig {
+    case privateMessage
+    case groupMessage
+}
+
 struct MessageView: View {
     let viewModel: MessageViewModel
+    let config: MessageViewConfig
     
     var body: some View {
         HStack {
@@ -25,22 +31,31 @@ struct MessageView: View {
                     .padding(.leading, 100)
                     .padding(.horizontal)
             } else {
-                HStack(alignment: .bottom) {
-                    KFImage(viewModel.profileImageUrl)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 32, height: 32)
-                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                VStack(alignment: .leading, spacing: 8) {
+                    if config == .groupMessage {
+                        Text(viewModel.message.user?.fullname ?? "")
+                            .foregroundColor(.gray)
+                            .font(.system(size: 14))
+                            .padding(.leading, 56)
+                    }
                     
-                    Text(viewModel.message.text)
-                        .padding(12)
-                        .background(Color(.systemGray6))
-                        .font(.system(size: 15))
-                        .clipShape(ChatBubble(isCurrentUser: false))
-                        .foregroundColor(.black)
+                    HStack(alignment: .bottom) {
+                        KFImage(viewModel.profileImageUrl)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 32, height: 32)
+                            .clipShape(Circle())
+                        
+                        Text(viewModel.message.text)
+                            .padding(12)
+                            .background(Color(.systemGray6))
+                            .font(.system(size: 15))
+                            .clipShape(ChatBubble(isCurrentUser: false))
+                            .foregroundColor(.black)
+                    }
+                    .padding(.horizontal)
+                    .padding(.trailing, 80)
                 }
-                .padding(.horizontal)
-                .padding(.trailing, 80)
                 
                 Spacer()
             }
