@@ -19,7 +19,7 @@ struct ConversationCellView: View {
                         //image
                         KFImage(viewModel.chatParnerProfileImageUrl)
                             .resizable()
-                            .scaledToFit()
+                            .scaledToFill()
                             .frame(width: 48, height: 48)
                             .clipShape(Circle())
                         //message info
@@ -30,6 +30,7 @@ struct ConversationCellView: View {
                             Text(viewModel.message.text)
                                 .font(.system(size: 15))
                         }
+                        .foregroundColor(.black)
                         
                         Spacer()
                     }

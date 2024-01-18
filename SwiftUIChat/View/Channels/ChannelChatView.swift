@@ -19,7 +19,7 @@ struct ChannelChatView: View {
         VStack {
             //messages
             ScrollView {
-                VStack {
+                VStack(alignment: .leading, spacing: 12) {
                     ForEach(viewModel.messages) { message in
                         MessageView(viewModel: MessageViewModel(message))
                         
