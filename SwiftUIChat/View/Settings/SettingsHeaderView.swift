@@ -29,9 +29,9 @@ struct SettingsHeaderView: View {
                     .font(.system(size: 18))
                     .foregroundColor(.black)
                 
-                Text("Available")
+                Text(user.status.title)
                     .font(.system(size: 14))
-                    .foregroundColor(.white)
+                    .foregroundColor(.gray)
             }
             Spacer()
         }

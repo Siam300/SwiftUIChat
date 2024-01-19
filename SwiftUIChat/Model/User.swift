@@ -11,10 +11,10 @@ import FirebaseFirestoreSwift
 struct User: Identifiable, Decodable, Hashable {
     @DocumentID var id: String?
     let username: String
-    let fullname: String
+    var fullname: String
     let email: String
-    let profileImageUrl: String
-    let status: UserStatus
+    var profileImageUrl: String
+    var status: UserStatus
 }
 
 let MOCK_USER  = User(username: "test",

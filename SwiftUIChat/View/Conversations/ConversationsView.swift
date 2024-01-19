@@ -27,7 +27,7 @@ struct ConversationsView: View {
             ScrollView {
                 VStack(alignment: .leading) {
                     
-                    HStack{ Spacer() }
+                    HStack { Spacer() }
                     
                     ForEach(viewModel.recentMessages) { message in
                         ConversationCellView(viewModel: ConversationCellViewModel(message))

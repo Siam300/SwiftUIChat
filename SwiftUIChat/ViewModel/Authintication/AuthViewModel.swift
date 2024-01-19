@@ -46,10 +46,10 @@ class AuthViewModel: NSObject, ObservableObject {
             guard let user = result?.user else { return }
             self.tempCurrentUser = user
             
-            let data: [String: Any] = ["email": email,
-                                       "fullname": fullname,
-                                       "username": username,
-                                       "status": UserStatus.notConfigured.rawValue]
+            let data: [String: Any] = [KEY_EMAIL: email,
+                                       KEY_FULLNAME: fullname,
+                                       KEY_USERNAME: username,
+                                       KEY_STATUS: UserStatus.notConfigured.rawValue]
             
             COLLECTION_USERS.document(user.uid).setData(data) { _ in
                 self.didAuthinticateuser = true

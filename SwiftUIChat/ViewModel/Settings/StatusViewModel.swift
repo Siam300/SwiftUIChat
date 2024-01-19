@@ -7,14 +7,6 @@
 
 import Foundation
 
-class StatusViewModel: ObservableObject {
-    @Published var status: UserStatus = .notConfigured
-    
-    func updateStauts(_ status: UserStatus) {
-        self.status = status
-    }
-}
-
 enum UserStatus: Int, CaseIterable, Codable {
     case notConfigured
     case available

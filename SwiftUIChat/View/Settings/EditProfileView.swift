@@ -9,17 +9,15 @@ import SwiftUI
 import Kingfisher
 
 struct EditProfileView: View {
-    @State private var fullName = "Full Name"
+    @State private var fullName = ""
     @State private var showImagePicker = false
     @State private var selectedImage: UIImage?
     @State private var profileImage: Image?
     @ObservedObject var viewModel: EditProfileViewModel
+    @Environment(\.dismiss) var dismiss
     
-    let user: User
-    
-    init(_ user: User) {
-        self.user = user
-        self.viewModel = EditProfileViewModel(user)
+    init(_ viewModel: EditProfileViewModel) {
+        self.viewModel = viewModel
     }
     
     var body: some View {
@@ -41,7 +39,7 @@ struct EditProfileView: View {
                                     .frame(width: 64, height: 64)
                                     .clipShape(Circle())
                             } else {
-                                KFImage(URL(string: user.profileImageUrl))
+                                KFImage(URL(string: viewModel.user.profileImageUrl))
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 64, height: 64)
@@ -68,7 +66,7 @@ struct EditProfileView: View {
                     Divider()
                         .padding(.horizontal)
                     
-                    TextField("", text: $fullName)
+                    TextField("Update your name", text: $fullName)
                         .padding(8)
                 }
                 .background(.white)
@@ -82,10 +80,10 @@ struct EditProfileView: View {
                     
                     //Status
                     NavigationLink(
-                        destination: StatusSelectorView(),
+                        destination: StatusSelectorView(viewModel),
                         label: {
                             HStack {
-                                Text("Available")
+                                Text(viewModel.user.status.title)
                                 
                                 Spacer()
                                 
@@ -103,11 +101,23 @@ struct EditProfileView: View {
         }
         .navigationTitle("Edit Profile")
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(trailing: doneButton)
     }
     
     func loadImage() {
         guard let selectedImage = selectedImage else { return }
         profileImage = Image(uiImage: selectedImage)
+    }
+    
+    var doneButton: some View {
+        Button(action: {
+            Task {
+                viewModel.updateName(fullName)
+                dismiss()
+            }
+        }, label: {
+            Text("Done")
+        })
     }
 }
 

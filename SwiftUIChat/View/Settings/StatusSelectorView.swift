@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct StatusSelectorView: View {
-    @ObservedObject var viewModel = StatusViewModel()
+    @ObservedObject var viewModel: EditProfileViewModel
+    
+    init(_ viewModel: EditProfileViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         ZStack {
@@ -21,7 +25,7 @@ struct StatusSelectorView: View {
                         .foregroundStyle(.gray)
                         .padding()
                     
-                    StatusCell(status: viewModel.status)
+                    StatusCell(status: viewModel.user.status)
                         .background(.white)
                     
                     Text("SELECT YOUR STATUS")
@@ -34,7 +38,7 @@ struct StatusSelectorView: View {
                         ForEach((UserStatus.allCases.filter({ $0 != .notConfigured }))
                                 , id: \.self) { status in
                             Button(action: {
-                                viewModel.updateStauts(status)
+                                viewModel.updateStatus(status)
                             }, label: {
                                 StatusCell(status: status)
                             })
@@ -47,9 +51,9 @@ struct StatusSelectorView: View {
     }
 }
 
-#Preview {
-    StatusSelectorView()
-}
+//#Preview {
+//    StatusSelectorView()
+//}
 
 struct StatusCell: View {
     let status: UserStatus

@@ -16,6 +16,9 @@ struct ChannelsView: View {
             
             ScrollView {
                 VStack {
+                    
+                    HStack { Spacer() }
+                    
                     ForEach(viewModel.channels) { channel in
                         ChannelCellView(channel: channel)
                     }
