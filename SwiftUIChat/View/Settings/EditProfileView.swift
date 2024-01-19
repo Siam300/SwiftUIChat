@@ -5,6 +5,7 @@
 //  Created by Auto on 5/1/24.
 //
 
+import PhotosUI
 import SwiftUI
 import Kingfisher
 
@@ -29,33 +30,59 @@ struct EditProfileView: View {
                 //Header
                 VStack {
                     //Photo, Edit Button, Text
-                    HStack {
+                    VStack {
                         //Photo, Edit Button
-                        VStack {
-                            if let profileImage = profileImage {
-                                profileImage
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 64, height: 64)
-                                    .clipShape(Circle())
-                            } else {
-                                KFImage(URL(string: viewModel.user.profileImageUrl))
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 64, height: 64)
-                                    .clipShape(Circle())
-                            }
-                            
-                            Button(action: {
-                                showImagePicker.toggle()
-                            }, label: {
-                                Text("Edit")
-                            })
-                            .sheet(isPresented: $showImagePicker, onDismiss: loadImage){
-                                ImagePicker(image: $selectedImage)
+                        
+                        PhotosPicker(selection: $viewModel.selectedImage) {
+                            VStack {
+                                if let profileImage = profileImage {
+                                    profileImage
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 64, height: 64)
+                                        .clipShape(Circle())
+                                } else {
+                                    KFImage(URL(string: viewModel.user.profileImageUrl))
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 64, height: 64)
+                                        .clipShape(Circle())
+                                }
+                                
+                                Text("Edit profile image")
+                                    .font(.footnote)
+                                    .fontWeight(.semibold)
+                                
+                                Divider()
                             }
                         }
                         .padding(.top)
+                        
+//                        VStack {
+//                            if let profileImage = profileImage {
+//                                profileImage
+//                                    .resizable()
+//                                    .scaledToFill()
+//                                    .frame(width: 64, height: 64)
+//                                    .clipShape(Circle())
+//                            } else {
+//                                KFImage(URL(string: viewModel.user.profileImageUrl))
+//                                    .resizable()
+//                                    .scaledToFill()
+//                                    .frame(width: 64, height: 64)
+//                                    .clipShape(Circle())
+//                            }
+//                            
+//                            Button(action: {
+//                                showImagePicker.toggle()
+//                            }, label: {
+//                                Text("Edit")
+//                            })
+//                            .sheet(isPresented: $showImagePicker, onDismiss: loadImage){
+//                                ImagePicker(image: $selectedImage)
+//                            }
+//                        }
+//                        .padding(.top)
                         
                         Text("Enter your name or change your profile photo")
                             .font(.system(size: 16))
@@ -65,9 +92,13 @@ struct EditProfileView: View {
                     
                     Divider()
                         .padding(.horizontal)
-                    
-                    TextField("Update your name", text: $fullName)
-                        .padding(8)
+                    HStack {
+                        Text("Name: ")
+                            .padding(.leading)
+                        
+                        TextField("Update your name", text: $fullName)
+                            .padding(8)
+                    }
                 }
                 .background(.white)
                 
@@ -104,10 +135,10 @@ struct EditProfileView: View {
         .navigationBarItems(trailing: doneButton)
     }
     
-    func loadImage() {
-        guard let selectedImage = selectedImage else { return }
-        profileImage = Image(uiImage: selectedImage)
-    }
+//    func loadImage() {
+//        guard let selectedImage = selectedImage else { return }
+//        profileImage = Image(uiImage: selectedImage)
+//    }
     
     var doneButton: some View {
         Button(action: {
@@ -118,6 +149,7 @@ struct EditProfileView: View {
         }, label: {
             Text("Done")
         })
+        .disabled(fullName.isEmpty)
     }
 }
 

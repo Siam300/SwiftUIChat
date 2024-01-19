@@ -79,8 +79,8 @@ struct CreateChannelView: View {
             viewModel.createChannel(name: channelName, image: selectedImage)
         }, label: {
             Text("Create").bold()
-                .disabled(channelName.isEmpty)
         })
+        .disabled(channelName.isEmpty)
     }
 }
 
