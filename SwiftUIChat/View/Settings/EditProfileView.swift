@@ -6,26 +6,34 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct EditProfileView: View {
     @State private var fullName = "Full Name"
     @State private var showImagePicker = false
     @State private var selectedImage: UIImage?
     @State private var profileImage: Image?
+    @ObservedObject var viewModel: EditProfileViewModel
+    
+    let user: User
+    
+    init(_ user: User) {
+        self.user = user
+        self.viewModel = EditProfileViewModel(user)
+    }
     
     var body: some View {
         ZStack {
             Color(.systemGroupedBackground)
                 .ignoresSafeArea()
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 44) {
+                //Header
                 VStack {
-                    //Header
                     //Photo, Edit Button, Text
-                    
-                    HStack(alignment: .center) {
+                    HStack {
                         //Photo, Edit Button
-                        VStack(alignment: .center) {
+                        VStack {
                             if let profileImage = profileImage {
                                 profileImage
                                     .resizable()
@@ -33,9 +41,9 @@ struct EditProfileView: View {
                                     .frame(width: 64, height: 64)
                                     .clipShape(Circle())
                             } else {
-                                Image(systemName: "person.fill")
+                                KFImage(URL(string: user.profileImageUrl))
                                     .resizable()
-                                    .scaledToFit()
+                                    .scaledToFill()
                                     .frame(width: 64, height: 64)
                                     .clipShape(Circle())
                             }
@@ -76,20 +84,17 @@ struct EditProfileView: View {
                     NavigationLink(
                         destination: StatusSelectorView(),
                         label: {
-                            HStack(alignment: .center) {
+                            HStack {
                                 Text("Available")
-                                    .frame(height: 50)
-                                    .padding(.leading)
                                 
                                 Spacer()
                                 
                                 Image(systemName: "chevron.right")
                                     .foregroundColor(.gray)
-                                    .padding(.trailing)
                             }
+                            .padding()
                             .background(Color.white)
                         })
-                    
                 }
                 
                 Spacer()
@@ -106,6 +111,6 @@ struct EditProfileView: View {
     }
 }
 
-#Preview {
-    EditProfileView()
-}
+//#Preview {
+//    EditProfileView()
+//}

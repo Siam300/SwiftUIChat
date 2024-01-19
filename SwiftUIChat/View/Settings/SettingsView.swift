@@ -22,7 +22,7 @@ struct SettingsView: View {
             VStack(spacing: 32) {
                 
                 NavigationLink(
-                    destination: EditProfileView(),
+                    destination: EditProfileView(user),
                     label: {
                         SettingsHeaderView(user: user)
                             .padding(.vertical)

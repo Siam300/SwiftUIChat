@@ -15,7 +15,7 @@ class StatusViewModel: ObservableObject {
     }
 }
 
-enum UserStatus: Int, CaseIterable {
+enum UserStatus: Int, CaseIterable, Codable {
     case notConfigured
     case available
     case busy

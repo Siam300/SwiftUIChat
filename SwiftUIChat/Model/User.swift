@@ -5,6 +5,7 @@
 //  Created by Auto on 9/1/24.
 //
 
+import Firebase
 import FirebaseFirestoreSwift
 
 struct User: Identifiable, Decodable, Hashable {
@@ -13,6 +14,11 @@ struct User: Identifiable, Decodable, Hashable {
     let fullname: String
     let email: String
     let profileImageUrl: String
+    let status: UserStatus
 }
 
-let MOCK_USER  = User(username: "test", fullname: "testing", email: "test@gmail.com", profileImageUrl: "www.test.com")
+let MOCK_USER  = User(username: "test",
+                      fullname: "testing",
+                      email: "test@gmail.com",
+                      profileImageUrl: "www.test.com",
+                      status: .available)

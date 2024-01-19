@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C90CEC972B59B3FE004B3A21 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90CEC962B59B3FE004B3A21 /* EditProfileViewModel.swift */; };
 		C91742792B56D9C400734735 /* CreateChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91742782B56D9C400734735 /* CreateChannelView.swift */; };
 		C917427B2B56E3DD00734735 /* CreateChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C917427A2B56E3DD00734735 /* CreateChannelViewModel.swift */; };
 		C917427D2B56F35100734735 /* ChannelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C917427C2B56F35100734735 /* ChannelsViewModel.swift */; };
@@ -90,6 +91,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C90CEC962B59B3FE004B3A21 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		C91742782B56D9C400734735 /* CreateChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelView.swift; sourceTree = "<group>"; };
 		C917427A2B56E3DD00734735 /* CreateChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelViewModel.swift; sourceTree = "<group>"; };
 		C917427C2B56F35100734735 /* ChannelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewModel.swift; sourceTree = "<group>"; };
@@ -184,6 +186,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C90CEC922B59B314004B3A21 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				C99E7DCF2B4B99970002ADF7 /* ChatViewModel.swift */,
+				C9B61F0F2B4DC6A70080BD58 /* NewMessageViewModel.swift */,
+				C9F4DA532B4E2DF900963C0C /* MessageViewModel.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		C90CEC932B59B33F004B3A21 /* Conversations */ = {
+			isa = PBXGroup;
+			children = (
+				C9F239AD2B557455001F7BDD /* ConversationCellViewModel.swift */,
+				C9F4DA552B4E35FE00963C0C /* ConversationsViewModel.swift */,
+			);
+			path = Conversations;
+			sourceTree = "<group>";
+		};
+		C90CEC942B59B34E004B3A21 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C9B3B6BF2B473975001D6BA1 /* SettingsCellViewModel.swift */,
+				C9FACF962B49151F00CB9FB0 /* StatusViewModel.swift */,
+				C90CEC962B59B3FE004B3A21 /* EditProfileViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C90CEC952B59B363004B3A21 /* Authintication */ = {
+			isa = PBXGroup;
+			children = (
+				C99E7DE02B4BB2690002ADF7 /* AuthViewModel.swift */,
+			);
+			path = Authintication;
+			sourceTree = "<group>";
+		};
 		C94F0A8D2B4670C000A042E1 = {
 			isa = PBXGroup;
 			children = (
@@ -248,15 +287,11 @@
 		C94F0AA92B4670D400A042E1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C90CEC952B59B363004B3A21 /* Authintication */,
+				C90CEC942B59B34E004B3A21 /* Settings */,
+				C90CEC932B59B33F004B3A21 /* Conversations */,
+				C90CEC922B59B314004B3A21 /* Messages */,
 				C9F1A4BF2B5659D700E71467 /* Channels */,
-				C9B3B6BF2B473975001D6BA1 /* SettingsCellViewModel.swift */,
-				C9FACF962B49151F00CB9FB0 /* StatusViewModel.swift */,
-				C99E7DCF2B4B99970002ADF7 /* ChatViewModel.swift */,
-				C99E7DE02B4BB2690002ADF7 /* AuthViewModel.swift */,
-				C9B61F0F2B4DC6A70080BD58 /* NewMessageViewModel.swift */,
-				C9F4DA532B4E2DF900963C0C /* MessageViewModel.swift */,
-				C9F4DA552B4E35FE00963C0C /* ConversationsViewModel.swift */,
-				C9F239AD2B557455001F7BDD /* ConversationCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -500,6 +535,7 @@
 				C917427F2B56F3C100734735 /* Channel.swift in Sources */,
 				C9B61F122B4DC71F0080BD58 /* Constants.swift in Sources */,
 				C9F1A4C12B565A1200E71467 /* SelectGroupMembersViewModel.swift in Sources */,
+				C90CEC972B59B3FE004B3A21 /* EditProfileViewModel.swift in Sources */,
 				C91742792B56D9C400734735 /* CreateChannelView.swift in Sources */,
 				C99E7E872B4C20AA0002ADF7 /* ProfilePhotoSelectorView.swift in Sources */,
 				C9F8DCBF2B4A732A0009FE0E /* CustomInputView.swift in Sources */,
